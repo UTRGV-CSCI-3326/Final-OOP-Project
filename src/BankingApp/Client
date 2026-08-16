@@ -1,0 +1,45 @@
+package BankingApp
+
+class Client{
+    
+    public void Welcome(){
+        System.out.println("Welc")
+    }
+    
+    //Making the name, acctnum, Dl, and address private so they cant be modified
+    private String name;
+    private int acctnum;
+    private int driversLicense;
+    private String address;
+    
+    public void setName(String name){
+        this.name = name;
+    }
+    public String name(){
+        return name;
+    }
+    
+    public void setAcctNum(int acctnum){
+        this.acctnum = acctnum;
+    }
+    
+    public int getAcctNum(){
+        return acctnum;
+    }
+    
+    public void setDL(int driversLicense){
+        this.driversLicense = driversLicense;
+    }
+    public int getDL(){
+        return driversLicense;
+    }
+    
+    public void setAddress(String address){
+        this.address =  address;
+    }
+    public String getAddress(){
+        return address;
+    }
+    
+    
+}
