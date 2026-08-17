@@ -1,9 +1,9 @@
-package BankingApp
+package BankingApp;
 
 class Client{
     
     public void Welcome(){
-        System.out.println("Welc")
+        System.out.println("Welcome to our bank!");
     }
     
     //Making the name, acctnum, Dl, and address private so they cant be modified
@@ -11,11 +11,11 @@ class Client{
     private int acctnum;
     private int driversLicense;
     private String address;
-    
+    private Account account;
     public void setName(String name){
         this.name = name;
     }
-    public String name(){
+    public String getName(){
         return name;
     }
     
@@ -40,6 +40,11 @@ class Client{
     public String getAddress(){
         return address;
     }
-    
+    public void setAccount(Account account){
+        this.account=account;
+    }
+    public Account getAccount(){
+        return account;
+    }
     
 }

@@ -1,6 +1,0 @@
-
-package BankingApp
-class CheckingAccount extends Client{
-    
-    
-}

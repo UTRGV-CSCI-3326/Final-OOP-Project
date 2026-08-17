@@ -1,6 +1,0 @@
-package BankingApp
-
-class SavingsAccount extends Client{
-    
-    
-}
