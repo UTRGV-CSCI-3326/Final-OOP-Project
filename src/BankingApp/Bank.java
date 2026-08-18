@@ -1,18 +1,22 @@
 package BankingApp;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Bank {
 
     private Client client;
     private Account account;
+        private final List<Client> clients = new ArrayList<>();
 
     public void Bankrun(){
         
         Scanner scanner = new Scanner(System.in);
 
-        this.client  = new Client();
-
+        String continueInput = "y";
+        while (continueInput.equalsIgnoreCase("y")) {
+        this.client = new Client();
         client.Welcome();
 
         System.out.print("Enter your name: ");
@@ -50,6 +54,7 @@ public class Bank {
         }
        
        client.setAccount(account);
+        clients.add(client);
         System.out.println();
         System.out.println("===== CLIENT INFORMATION =====");
         System.out.println("Name: " + client.getName());
@@ -73,7 +78,12 @@ public class Bank {
                 + client.getAccount().getBalance()
         );
 
+        System.out.print("Create another account? (y/n): ");
+        scanner.nextLine(); // Consume the leftover newline after nextDouble()
+        continueInput = scanner.nextLine();
+        }
+
         scanner.close();
     }
-    
+
 }
