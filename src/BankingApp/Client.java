@@ -6,7 +6,6 @@ class Client{
         System.out.println("Welcome to our bank!");
     }
     
-    //Making the name, acctnum, Dl, and address private so they cant be modified
     private String name;
     private int acctnum;
     private int driversLicense;

@@ -4,8 +4,9 @@ public abstract class Account {
     private int accountNumber;
     private double balance;
 
-    public Account(int accountNumber, double balance) {
-        this.accountNumber = accountNumber;
+    public Account(double balance) {
+        this.accountNumber =
+                AccountNumberGenerator.generateAccountNumber();
         this.balance = balance;
     }
 
@@ -18,19 +19,16 @@ public abstract class Account {
     }
 
     public void deposit(double amount) {
-
         if (amount > 0) {
             balance += amount;
         }
     }
 
     public void withdraw(double amount) {
-
         if (amount > 0 && amount <= balance) {
             balance -= amount;
-        }
-        else {
-            System.out.println("Not enough money.");
+        } else {
+            System.out.println("Invalid withdrawal.");
         }
     }
 
